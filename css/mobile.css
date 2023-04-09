@@ -1,0 +1,112 @@
+@media (max-width :550px) {
+    #banner {
+        background-size: cover;
+    }
+
+    #avt {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        display: grid;
+        grid-template-columns: 25px 1fr;
+    }
+
+    #nav-bar {
+        display: block;
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+    }
+
+    #about .container {
+        display: block;
+    }
+
+    #target {
+        margin-bottom: -20px;
+
+    }
+
+    #job-info .container {
+        width: 550px;
+        margin-left: -100px;
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 200px;
+        margin-left: -200px;
+    }
+
+    #job-info h1 {
+
+        margin-left: 50px;
+
+    }
+
+    #certificate {
+        width: 550px;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .noidung {
+        margin-top: 50px;
+        margin-left: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .abc {
+        display: block
+    }
+
+    .rate {
+        display: none;
+    }
+
+    .abc {
+        border-bottom: 1px solid red;
+        width: 300px;
+    }
+
+    .cont1,
+    .cont2,
+    .cont3 {
+        margin-top: 10px;
+    }
+
+    #project {
+        width: 550px;
+    }
+
+    .gridbox {
+        display: grid;
+        grid-template-columns: 1fr;
+        word-wrap: break-word;
+        width: 550px;
+    }
+
+    #project .img {
+        height: 315px;
+        width: 490px;
+    }
+
+    .head {
+        display: grid;
+        grid-template-columns: 100px 50px;
+    }
+
+    #year {
+        grid-column: 1/3
+    }
+
+    .tt {
+        border: 1px solid rgb(238,238,238);
+    }
+    #footer .icon {
+        font-size: 15px;
+        margin-top: 4px;
+    }
+}

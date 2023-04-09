@@ -1,0 +1,93 @@
+@media (max-width :768px) and (min-width :551px) {
+    #avt {
+        display: none;
+
+    }
+
+    #banner {
+        background-size: cover;
+    }
+
+    #target {
+        width: 330px;
+        height: 300px;
+        margin-left: -60px;
+
+    }
+
+    #job-info .container {
+        width: 768px;
+        margin-left: -100px;
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #certificate {
+        width: 768px;
+        height: auto;
+        margin-left: -125px;
+        margin-top: 20px;
+    }
+
+    .noidung {
+        margin-top: 50px;
+        margin-left: 0px;
+        display: grid;
+        grid-template-columns: 384px 384px;
+    }
+
+    .abc {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+    }
+
+    .rate {
+        margin-top: -140px;
+    }
+
+    #project {
+        margin-top: 100px;
+        margin-left: -15px;
+    }
+
+    #project .img {
+        height: 90px;
+        width: 140px
+    }
+
+    .gridbox {
+        display: grid;
+        grid-template-columns: 256px 256px 256px;
+        gap: 0;
+        word-wrap: break-word;
+        width: 768px;
+    }
+
+    #project h3 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .tt {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+    }
+
+    #project p {
+        font-size: 10px;
+    }
+
+    .head {
+        display: grid;
+        grid-template-columns: 45px 45px 45px 45px 30px;
+        justify-items: center;
+    }
+
+    .content {
+        margin-top: 20px;
+    }
+    #footer .icon {
+        font-size: 20px;
+    }
+}
