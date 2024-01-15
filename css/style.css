@@ -1,480 +1,232 @@
-header {
-    width: auto;
-    height: 500px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-#banner {
-    position: relative;
-    height: 400px;
-    width: auto;
-    background-size: cover;
-    filter: brightness(50%);
+.icon-search {
+  width: 20px;
+  height: auto;
 }
 
-.banner .cnt {
-    text-align: center;
-    margin-top: -350px;
-    padding-bottom: 250px;
-    position: relative;
-    color: white;
-}
-
-#avt {
-    position: relative;
-    margin-top: -90px;
-    background-color: white;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    margin-left: 130px;
-}
-
-#avt img {
-    border-radius: 50%;
-    margin-top: 10px;
-    margin-left: 10px;
-
-}
-
-#nav-bar {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-}
-
-.menu a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu i {
-    color: rgb(25, 156, 219);
-}
-
+/* menu navbar */
 .menu {
-    display: grid;
-    grid-template-columns: 30px 200px 30px 100px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(35, 58, 122);
+  color: white;
 }
 
-/*-------------------------------------*/
-#about {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-
+.menu li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: background 0.3s; /* Hiệu ứng chuyển đổi màu nền */
 }
 
-#about .container {
-    display: grid;
-    font-size: 13px;
-    font-family: sans-serif;
-    grid-template-columns: 1fr 1fr;
+.menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom right,
+    #0080ff 0%,
+    transparent 50%,
+    transparent 100%
+  );
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s;
 }
 
-#target {
-    background-color: rgb(245, 245, 245);
-
+.menu li:hover::before {
+  transform: scaleX(1);
 }
 
-#personal-info {
-    background-color: rgb(240, 240, 240);
+.menu li:hover {
+  background: #0080ff; /* Màu nền khi hover */
+  color: white; /* Màu chữ khi hover */
 }
 
-#job-info {
-    padding-left: 200px;
-    padding-right: 200px;
+/*icon*/
+.icon-home {
+  width: 20px;
+  height: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.logo img {
+  width: 200px;
+  height: auto;
+  margin-left: 100px;
+}
+.container-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: auto;
+  margin-top: 10px;
 }
 
-#name {
-    display: grid;
-    grid-template-columns: 60px 60px;
+.search img,
+.search svg {
+  margin-left: auto;
 }
-
-#ht {
-    border-radius: 30%;
-    text-align: center;
-    height: 30px;
-    width: 60px;
-    margin-top: -3px;
-    background: rgb(25, 156, 219);
-}
-
-#about h1 {
-    font-size: 20px;
-    margin-top: 20px;
-    padding-left: 20px;
-    font-weight: 100;
-}
-
-#about p {
-    font-size: 12px;
-    padding: 30px;
-}
-
-#about ul {
-    font-size: 12px;
-    padding: 30px;
-    list-style: none;
-}
-
-/*-------------------------------------*/
-#job-info .container {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-}
-
-#job-info p {
-    font-size: 12px;
-}
-
-#job-info li {
-    font-size: 12px;
-    color: rgb(25, 156, 219)
-}
-
-#job-info h1 {
-    font-size: 20px;
-    padding: 10px;
-    font-weight: 500;
-}
-
-#job-info h4 {
-    font-size: 15px;
-    color: black;
-    font-weight: 400;
-}
-
-.head1 {
-    border: 1px solid rgb(234, 234, 234);
-    padding: 10px;
-}
-
-.ct1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px
-}
-
-.box1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-/*-------------------------------------*/
-#certificate {
-    background: rgb(247, 247, 247);
-    margin: 80px;
-    margin-top: 0px;
-    height: 350px;
-}
-
-.noidung {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-#certificate h1 {
-    font-size: 20px;
-    font-weight: 500;
-}
-
+/**/
 .abc {
-    display: grid;
-    grid-template-columns: 180px 1fr;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px; /* Đảm bảo không che phủ border bottom */
+  cursor: pointer;
 }
 
-#certificate p {
-    font-size: 13px;
+.abc::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Chiều cao của border bottom */
+  background-color: black; /* Màu của border bottom */
+  transform: scaleX(0); /* Bắt đầu với chiều rộng là 0 */
+  transform-origin: left; /* Đặt điểm xoay là phía bên phải */
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng di chuyển với độ trễ 0.3s */
 }
 
-.rate {
-    border: 1px solid #d6c08d;
-    width: 1100px;
-    margin-top: -120px;
-    margin-left: -30px;
+.abc:hover::before {
+  transform: scaleX(
+    1
+  ); /* Khi hover, di chuyển border bottom từ trái qua phải */
+}
+/*main*/
+.banner img {
+  width: 100%;
+  height: 500px;
+}
+.banner {
+  position: relative;
 }
 
-.noidung p {
-    font-weight: 300;
+.title-banner {
+  position: relative;
+  text-align: center;
+  color: white; /* Màu chữ trắng trên nền gradient */
+  width: 100%; /* Chiếm toàn bộ chiều rộng của phần .banner */
+  height: 150px; /* Đặt chiều cao mong muốn */
+  overflow: hidden; /* Ngăn chữ tràn ra khỏi .title-banner */
 }
 
-/*-------------------------------------*/
-#project {
-    padding: 20px;
+.title-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #0074cc, transparent);
+  z-index: -1;
 }
 
-.gridbox {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 15px;
+.title-banner {
+  margin: 0;
+  position: absolute;
+
+  transform: translate(-30%, -103%);
+  width: 100%;
+}
+.title-banner h2 {
+  font-size: 35px;
+}
+/*section1*/
+.row {
+  display: flex;
+  gap: 100px;
+  background-color: rgb(245, 245, 245);
+  justify-content: center;
+}
+.row h1 {
+  font-size: 40px;
+  left: 50%;
+  right: 50%;
+}
+/*section2*/
+.icon {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 80px; */
+}
+.count {
+  color: rgb(0, 130, 196);
+  font-size: 48px;
+}
+.number-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+/*footer*/
+
+.bottom-wrap .container {
+  display: flex;
+  justify-content: center;
 }
 
-.content {
-    border: 1px solid rgb(238,238,238);
-    border-top: none;
-    height: 300px;
+/* Loại bỏ các định dạng mặc định của danh sách */
+.type-none {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Hiển thị danh sách là một hàng ngang */
 }
 
-.head {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    border: 1px solid rgb(238,238,238);
-    border-left: none;
-    border-right: none;
+/* Khoảng cách giữa các mục danh sách */
+.type-none li {
+  margin-right: 20px; /* Có thể điều chỉnh khoảng cách theo ý muốn */
 }
-
-.tt {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    border-bottom: none;
+.copy-right {
+  text-align: center;
 }
-
-#project h3 {
-    font-size: 16px;
-    font-weight: 400;
+.title-ft {
+  /* margin-left: 20px; */
+  color: #0074cc;
+  text-align: center;
 }
-
-#project .img {
-    height: 360px;
-    width: 560px
+.type-none-menu-list li a {
+  text-decoration: none;
+  color: rgb(105, 102, 102);
 }
-
-#year {
-    border-radius: 30%;
-    width: 50px;
-    text-align: center;
-    height: 25px;
-    background: rgb(25, 156, 219);
+.type-none-menu-list,
+.type-none-social-list {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 50px ;
 }
-
-.tt {
-    padding: 10px;
+.swiper-slide a {
+  text-decoration: none;
+  color: rgb(99, 95, 95);
+  margin-left: 10px;
 }
-
-/*-------------------------------------*/
-#footer ul {
-    display: grid;
-    grid-template-columns: 50px 100px 50px 100px 50px 100px;
-    justify-content: center;
-    list-style: none;
+.swiper-slide time {
+  color: rgb(177, 173, 173);
 }
-
-#footer .icon {
-    color: rgb(25, 156, 219);
-    font-size: 30px;
-    margin-top: -10px;
+.lozad1 {
+  width: 800px;
+  height: 500px;
+  border-radius: 5%;
 }
-
-/*-------------------------------------*/
-/*@media (max-width :768px) and (min-width :551px) {
-    #avt {
-        display: none;
-
-    }
-
-    #banner {
-        background-size: cover;
-    }
-
-    #target {
-        width: 330px;
-        height: 300px;
-        margin-left: -60px;
-
-    }
-
-    #job-info .container {
-        width: 768px;
-        margin-left: -100px;
-        display: block;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #certificate {
-        width: 768px;
-        height: auto;
-        margin-left: -125px;
-        margin-top: 20px;
-    }
-
-    .noidung {
-        margin-top: 50px;
-        margin-left: 0px;
-        display: grid;
-        grid-template-columns: 384px 384px;
-    }
-
-    .abc {
-        display: grid;
-        grid-template-columns: 140px 1fr;
-    }
-
-    .rate {
-        margin-top: -140px;
-    }
-
-    #project {
-        margin-top: 100px;
-        margin-left: -15px;
-    }
-
-    #project .img {
-        height: 90px;
-        width: 140px
-    }
-
-    .gridbox {
-        display: grid;
-        grid-template-columns: 256px 256px 256px;
-        gap: 0;
-        word-wrap: break-word;
-        width: 768px;
-    }
-
-    #project h3 {
-        font-size: 14px;
-        font-weight: 400;
-    }
-
-    .tt {
-        display: grid;
-        grid-template-columns: 50px 1fr;
-    }
-
-    #project p {
-        font-size: 10px;
-    }
-
-    .head {
-        display: grid;
-        grid-template-columns: 45px 45px 45px 45px 30px;
-        justify-items: center;
-    }
-
-    .content {
-        margin-top: 20px;
-    }
-    #footer .icon {
-        font-size: 20px;
-    }
-}*/
-
-@media (max-width :550px) {
-    #banner {
-        background-size: cover;
-    }
-
-    #avt {
-        display: none;
-    }
-
-    .menu {
-        display: block;
-        display: grid;
-        grid-template-columns: 25px 1fr;
-    }
-
-    #nav-bar {
-        display: block;
-        grid-template-columns: 1fr;
-        padding-left: 20px;
-    }
-
-    #about .container {
-        display: block;
-    }
-
-    #target {
-        margin-bottom: -20px;
-
-    }
-
-    #job-info .container {
-        width: 550px;
-        margin-left: -100px;
-        display: block;
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-top: 200px;
-        margin-left: -200px;
-    }
-
-    #job-info h1 {
-
-        margin-left: 50px;
-
-    }
-
-    #certificate {
-        width: 550px;
-        height: auto;
-        margin-top: 20px;
-        margin-left: 0px;
-    }
-
-    .noidung {
-        margin-top: 50px;
-        margin-left: 0px;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .abc {
-        display: block
-    }
-
-    .rate {
-        display: none;
-    }
-
-    .abc {
-        border-bottom: 1px solid red;
-        width: 300px;
-    }
-
-    .cont1,
-    .cont2,
-    .cont3 {
-        margin-top: 10px;
-    }
-
-    #project {
-        width: 550px;
-    }
-
-    .gridbox {
-        display: grid;
-        grid-template-columns: 1fr;
-        word-wrap: break-word;
-        width: 550px;
-    }
-
-    #project .img {
-        height: 315px;
-        width: 490px;
-    }
-
-    .head {
-        display: grid;
-        grid-template-columns: 100px 50px;
-    }
-
-    #year {
-        grid-column: 1/3
-    }
-
-    .tt {
-        border: 1px solid rgb(238,238,238);
-    }
-    #footer .icon {
-        font-size: 15px;
-        margin-top: 4px;
-    }
+.caption1 {
+  display: flex;
+}
+.abcd {
+  padding: 100px;
 }
